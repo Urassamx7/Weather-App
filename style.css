@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    
+    background: linear-gradient(135deg,#72EDF2 10%, #5151E5 100%);;
+    min-height: 100vh;
+}  
+.clear {
+	clear: both;
+} 
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.w-data{
+    color: black;
+}
+
+.header div{
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    a{
+        text-decoration: none;
+        color: #FFF;
+    }
+}
+#w-search{
+    width: 500px;
+    height: 40px;
+    border-radius: 10px;
+}
+.section, .w-container{
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+}
+.w-container{
+    justify-content: flex-start;
+    width: 900px;
+    margin: 1rem;
+    background-color: #162029;
+ 
+    div{
+        line-height: 1.5rem;
+    }
+}
+.w-div{
+    border-radius: 5px 10px 10px 5px;
+    background-image: url('assets/ico/240_F_823017477_wHonoalk6eIZ5nk4ljeEYuskqyT4HC5h.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 250px;
+    padding: 1rem;
+}
+.w-div:hover{
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    transform: scale(1.1) perspective(1500px) rotateY(10deg);
+}
+#location{
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.image{
+    padding: 1rem;
+}
+.data-info{
+    padding: 1.5rem;
+    padding-left: 0;
+    span{
+        font-size: 3rem;
+        font-weight: 700;
+    }
+}
+.w-situation{
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+    color: black;
+}
+.w-div-week{
+    margin-top: -1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 760px;
+    
+}
+.week-container{
+    background-color: #19232E;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.day-status{
+    background-color: #19232E;
+    padding: 15px;
+	margin: 25px 5px 5px 5px;
+	box-shadow: 0 0 50px -5px rgba(0, 0, 0);
+	border-radius: 10px;
+
+}
+.week-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 10px 35px;
+	box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+}
+.week-list>li {
+	float: left;
+	padding: 15px;
+	cursor: pointer;
+	transition: 200ms ease;
+	border-radius: 10px;
+}
+
+.week-list>li:hover {
+	transform: scale(1.1);
+	background: #222831;
+	color: #222831;
+	box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2)
+}
+
+.week-list>li.active {
+	background: #fff;
+	color: #222831;
+	border-radius: 10px;
+}
+.week-list>li .day-name {
+	display: block;
+	margin: 10px 0 0 0;
+	text-align: center;
+}
+
+.week-list>li .day-icon {
+	display: flex;
+	margin-top: 20px;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	width: auto;
+	margin: 0 auto;
+	font-size: 35px;
+}
+
+.week-list>li .day-icon img {
+	filter: drop-shadow(0 0 2px white);
+}
+
+.week-list>li .day-temp {
+	display: block;
+	text-align: center;
+	margin-top: 15px;
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+.w-filter{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+
+}
+.location-input {
+	position: relative;
+	width: 500px;
+	border: none;
+	border-radius: 25px;
+	padding: 10px;
+	font-family: 'Montserrat', sans-serif;
+	background-image: var(--gradient);
+	color: #000000;
+	font-weight: 700;
+	box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.25);
+	transition: transform 200ms ease;
+}
+.span{
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: .08rem;
+}
+.humidade, .vento{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+    
+}
+.day-status-general{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.day-name::first-letter{
+text-transform: uppercase;
+}

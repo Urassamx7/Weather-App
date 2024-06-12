@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="shortcut icon" href="assets/ico/sunny_sun_cloud_weather_cloudy_icon_194237.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header class="header">
+      <div class="w-ico">
+        <a href="https://github.com/Urassamx7" class="git"
+          >Marvin's Weather App</a
+        >
+      </div>
+      <div id="w-data"></div>
+    </header>
+    <div class="w-filter">
+      <input
+        class="location-input"
+        type="text"
+        id="city"
+        value="Maputo"
+        placeholder="Introduza a cidade/provínvia"
+      />
+    </div>
+    <section class="section">
+      <div class="w-container">
+        <div class="w-div">
+          <div class="location">
+            <span class="material-symbols-outlined"> location_on </span>
+            <span id="location"></span>
+            <br />
+            <span class="week-day"></span>
+          </div>
+          <div class="image"><span id="image-cont"></span></div>
+          <div class="data-info">
+            <span class="degree-info"></span>
+          </div>
+          <span class="w-situation"></span>
+        </div>
+
+        <div class="w-div-week">
+          <div class="day-status">
+            <div class="day-status-general">
+              <div class="humidade">
+                <span class="material-symbols-outlined" style="color: white">
+                  humidity_high
+                </span>
+                <span class="span">HUMIDADE</span>
+              </div>
+              <div class="percent"><span id="percent"></span></div>
+            </div>
+
+            <div class="day-status-general">
+              <div class="vento">
+                <span class="material-symbols-outlined" style="color: white">
+                  air
+                </span>
+                <span class="span">VENTO</span>
+              </div>
+              <div class="milis"><span id="milis"></span></div>
+            </div>
+          </div>
+          <div class="week-container">
+            <ul class="week-list">
+              <li>
+                <span class="day-name"></span>
+                <span class="day-temp"></span>
+                <span class="day-icon">
+                  <img src="" alt="" />
+                </span>
+              </li>
+              <li>
+                <span class="day-name"></span>
+                <span class="day-temp"></span>
+                <span class="day-icon"></span>
+              </li>
+              <li>
+                <span class="day-name"></span>
+                <span class="day-temp"></span>
+                <span class="day-icon"></span>
+              </li>
+              <li>
+                <span class="day-name"></span>
+                <span class="day-temp"></span>
+                <span class="day-icon"></span>
+              </li>
+              <div class="clear"></div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
