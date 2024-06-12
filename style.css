@@ -33,6 +33,10 @@ body{
         color: #FFF;
     }
 }
+.git:hover{
+    transition: .3s ease-in-out;
+    color: #5151E5;
+}
 #w-search{
     width: 500px;
     height: 40px;
