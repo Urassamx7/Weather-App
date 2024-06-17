@@ -23,19 +23,10 @@ document.querySelector(".week-day").innerHTML = dayOfWeek;
 
 //Buscando a temperatura
 //AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
-
-/*document.getElementById("city").addEventListener("input", function () {
-  var city = this.value;
-  getWeather(city);
-});*/
-
-async function getWeather() {
+async function getWeather(lat, long) {
   try {
-    //var city = document.getElementById("city").value;
-    //console.log(city);
-
     await fetch(
-      "https://api.openweathermap.org/data/2.5/forecast?lat=-25.97&lon=32.58&lang=pt_br&appid=47de0abea78a097e485110809ed947a9"
+      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}8&lang=pt_br&appid=47de0abea78a097e485110809ed947a9`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -67,7 +58,7 @@ async function getWeather() {
             dailyForecast[day].minTemp = Math.min(
               dailyForecast[day].minTemp,
               data.main.temp_min - 273
-            ) ;
+            );
 
             dailyForecast[day].maxTemp = Math.max(
               dailyForecast[day].maxTemp,
@@ -124,8 +115,20 @@ function getWeatherIcon(iconCode) {
   const iconSize = "@2x.png";
   return `<img src="${iconBaseUrl}${iconCode}${iconSize}" alt="Weather Icon">`;
 }
-
+//Get de Geographical Location
+function getGeolocation() {
+  if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      var lat = position.coords.latitude.toFixed(3);
+      var long = position.coords.longitude.toFixed(3);
+      console.log("Latitude:" +(lat) + " Longitude:" + long);
+      getWeather(lat, long);
+    });
+  } else {
+    console.log("Impossible to get weather");
+  }
+}
 document.addEventListener("DOMContentLoaded", function () {
-  getWeather();
+  getGeolocation();
   setInterval(getWeather, 900000);
 });
