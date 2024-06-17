@@ -125,6 +125,7 @@ function getGeolocation() {
       getWeather(lat, long);
     });
   } else {
+    window.alert("Impossible to get weather");
     console.log("Impossible to get weather");
   }
 }
